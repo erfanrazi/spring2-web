@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAspect {
 
-    //@Around("execution(* com.example.spring2web.HelloWorld.*(..))")
-    @Around("")
+    @Around("execution(* com.example.spring2web.HelloWorld.*(..))")
+    //@Around("")
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("log...");
         return joinPoint.proceed();
